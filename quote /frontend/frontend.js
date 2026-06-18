@@ -1,8 +1,6 @@
 const fetchQuote = async () => {
     const response = await fetch("http://127.0.0.1:3000/")
     const data = await response.json()
-    // console.log("data is : ", data);
-    // console.log(`"${data.quote}" - ${data.author}`);
     const q = document.getElementById("quote");
     q.textContent = data.quote
 
@@ -16,4 +14,4 @@ button.addEventListener("click", () => {
 })
 
 
-// console.log("the function is ", fetchQuote())
+fetchQuote();
